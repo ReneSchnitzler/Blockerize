@@ -4,6 +4,10 @@ Blockerize is a Minecraft Cloud System based on Docker.
 #
 
  It should include everything to start immediatley building your Network.
+ 
+ The first downloadable Release is planned for August 2022.
+ 
+ The Current Progress is documented here:
 
 Checklist of Features:
  - [X] Basic Framework
