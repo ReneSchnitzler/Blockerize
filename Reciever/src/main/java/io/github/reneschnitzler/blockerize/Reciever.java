@@ -9,6 +9,7 @@ import io.github.reneschnitzler.blockerize.managers.queues.DatabaseQueue;
 import io.github.reneschnitzler.blockerize.managers.queues.NetworkingQueue;
 import io.github.reneschnitzler.blockerize.managers.workers.DatabaseWorker;
 import io.github.reneschnitzler.blockerize.managers.workers.NetworkingWorker;
+import io.github.reneschnitzler.blockerize.networking.NetworkMaster;
 import io.github.reneschnitzler.blockerize.security.PortCheckWorker;
 import lombok.Getter;
 import org.apache.log4j.Level;
@@ -32,6 +33,8 @@ public class Reciever {
     public final static DatabaseWorker databaseWorker = new DatabaseWorker();
     @Getter
     public final static NetworkingWorker networkingWorker = new NetworkingWorker();
+    @Getter
+    public final static NetworkMaster networkMaster = new NetworkMaster();
 
 
     public static void main(String[] args) throws InterruptedException, IOException, PortOutOfRangeException, PortIsntAvailableException {
@@ -58,6 +61,7 @@ public class Reciever {
                 new io.github.reneschnitzler.blockerize.logging.Logger("Starting Worker", false).sendInfo();
                 databaseWorker.start();
             }
+            networkMaster.startServer();
         }
         new io.github.reneschnitzler.blockerize.logging.Logger("The Ports arent available to Expose the Reciever. Please check the availabitlity and rerun the Application. Shutting down...",true).sendFatal();
         throw new PortIsntAvailableException("Port isnt available for exposing Application!");
