@@ -26,3 +26,15 @@ Checklist of Features:
 Version 0.0.1:
 - 
 - Initial Commit
+
+Version 0.0.1a:
+- 
+- Added Basic Networking
+- Added Basic Framework
+- Added Basic Logging
+- Added Queue and Worker Lifecycle
+
+ 
+
+
+
