@@ -6,7 +6,7 @@ Blockerize is a Minecraft Cloud System based on Docker.
  It should include everything to start immediatley building your Network.
 
 Checklist of Features:
- - [X] Grundgerüst
+ - [X] Basic Framework
  - [X] Logging
  - [X] Queue System
  - [X] Worker System
